@@ -1,0 +1,377 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* 1/ Vị trí
+    2/ Kích thước
+    3/ MÀu sặc
+    4/ Kiểu dáng
+*/
+/* 1. từ ngoài vào trong
+    2. Từ trên xuống dưới
+    3. Từ tổng quan đến chi tiết
+     */
+html{
+    font-family:sans-serif;
+    scroll-behavior: smooth;
+}
+    
+#main{
+    /* overflow:hidden; */
+}
+
+#main > #slider{
+    overflow:hidden;
+}
+.clear {
+    clear: both;
+}
+#header{
+    position: fixed;
+    height: 46px;
+    background-color:#000;
+    z-index: 1;
+    left:0;
+    right: 0;
+    top: 0;
+    overflow:hidden;
+    /* Có thế thêm over này vào css chung luôn vì desktop header cũng chỉ có 46px */
+}
+
+/* Header */
+#nav{
+    display:inline-block;
+}
+#nav li{
+    display: inline-block;
+    position: relative;
+}
+#nav >li > a{
+    display: block;
+}
+#nav .subnav{
+    display: none;
+    position:absolute;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #5d5c5c;
+   
+
+}
+#nav .subnav li{
+    display:block;
+    min-width: 160px;
+}
+#nav .subnav a{
+    color: #000;
+    
+}
+
+#nav .subnav li:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+
+#nav li a {
+    line-height:46px;
+    color: #fff;
+    padding:0 24px;
+    text-decoration: none;
+
+}
+
+#nav >li:hover > a{
+    background-color: #ccc;
+    color: #000;
+}
+
+#nav .icon-down{
+    font-size:12px;
+}
+
+
+#header .btn-search,
+#header .mobile-menu-btn{
+    float:right;
+}
+
+#header .mobile-menu-btn{
+    display:none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .icon-search,
+#header .menu-icon{
+    color: #fff;
+    line-height: 46px;
+    padding:0 24px;
+    font-size: 15px;
+    font-weight: 1000;;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+/* Chỗ này bắt buộc phải dùng #header để ko thua độ ưu tiên của màu header thẻ li */
+
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+#header .btn-search:hover
+{
+    background-color: red;
+}
+
+/* End Header */
+
+/* Begin Slider */
+#slider{
+   position: relative;
+   background-color: #333;
+   margin-top: 46px;
+   background-image:url('/assets/img/slide-1.jpg');
+   padding-top: 50%;
+   background-repeat: no-repeat;
+   background-size: contain; 
+   position: relative;
+
+}
+#slider .text-content{
+    position:absolute;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    bottom: 47px;
+    
+}
+#slider .text-heading{
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* End Slider */
+
+/* Begin Content section */
+
+#content .content-section{
+    width:800px;
+    padding:64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-heading, .section-sub-heading
+{
+    text-align: center;
+}
+
+.section-heading{
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 6px;
+    padding: 10px 0;
+}
+.section-sub-heading{
+    padding:5px 0 15px 0;
+    font-style: italic;
+    opacity: 60%;
+    font-size: 15px;
+}
+
+/* Content - About */
+
+.about-text{
+    text-align: justify;
+    font-size:15px;
+    line-height: 1.4;
+}
+
+.member-list{
+    display: flex;
+    justify-content: space-around;
+    padding:32px 0;
+}
+.member-list img{
+    width:154px;
+    height:auto;
+}
+
+.member-list .member-name{
+    text-align: center;
+    padding:22px 0;
+    font-size: 15px;
+}
+
+/* End content About */
+
+/* Begin Tour */
+
+
+
+#content .content-tour{
+    background-color:#000;
+    color: #fff;
+    @media (min-width:) 740pxƠ  */
+     /*tablet*/
+}
+
+#content .ticket-list{
+    background-color:#fff;
+    color: #888;
+    list-style: none;
+    font-size: 15px;
+    margin-top: 15px;
+
+}
+#content .ticket-list li{
+    padding:8px 16px 8px 16px;
+    border-bottom: solid 0.5px #ccc;
+}
+
+.ticket-list .sold-out{
+    padding: 4px 8px;
+    background-color: #fd3f26;
+    color: #fff;
+    margin-left: 16px;
+}
+.ticket-list .quantity{
+    float: right;
+    background-color:#000;
+    border-radius: 50%;
+    color: #fff;
+    padding:3px 8px;
+    line-height: 16px;
+
+}
+
+.content-tour .place-list{
+    display:flex;
+    justify-content:space-around;
+    margin:0px -8px;
+
+
+}
+
+.place-img{
+    width:100%;
+    display:block;
+}
+
+.place-item{
+    padding: 0 8px;
+}
+
+.place-body{
+    background-color:#fff;
+    color: #000;
+    font-size: 15px;
+    padding:16px
+}
+
+.place-heading{
+    font-weight: 550;
+}
+.place-time{
+    margin:15px 0;
+    opacity: 80%;
+}
+.place-desciption{
+    margin-bottom: 15px;
+}
+.btn-ticket {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding:8px 16px;
+    display: inline-block;
+}
+.btn-ticket:hover{
+    background-color:rgb(163, 163, 163);
+}
+
+/* Begin Contact content */
+
+.row{
+    /* margin-right: -20px; */
+}
+.col{
+float: left;
+}
+.col-2{
+    width:50%; 
+}
+.col-full{
+    width:100%
+}
+.contact-content{
+    max-width: 800px;
+}
+.contact-content p{
+    padding:4px 0;
+}
+.contact-content i{
+    padding-right: 12px;
+    font-weight: 700;
+}
+.form-control{
+    padding:8px;
+    border: solid 1px #ccc;
+    /* width:100% */
+}
+.col-name{
+    /* padding-right: 20px; */
+}
+.col-message{
+    /* padding-right: 60px;  */
+    margin-top: 10px;
+
+}
+
+.form-submit-btn{
+    margin-top: 15px;
+    float: right;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    border:none;
+}
+.form-submit-btn:hover{
+    background-color:#ccc;
+    
+}
+.col-mail{
+    float: right;
+}
+/* Map IMG */
+.contact-img{
+  width: 100%;
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .icon-socail a {
+    text-decoration:none;
+    color: #615f5f;
+    font-size: 24px;
+}
+.icon-socail a:hover{
+    opacity: 0.6;
+    transition: all 1s;
+    transform: translateY(-2px);
+}
+#footer .copy-right, a{
+    color: #615f5f;
+    margin-top: 15px;
+}
+

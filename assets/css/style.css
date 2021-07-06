@@ -1,0 +1,391 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+}
+/* 1/ Vị trí
+    2/ Kích thước
+    3/ MÀu sặc
+    4/ Kiểu dáng
+*/
+/* 1. từ ngoài vào trong
+    2. Từ trên xuống dưới
+    3. Từ tổng quan đến chi tiết
+     */
+html{
+    scroll-behavior: smooth;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.clear{
+    clear: both;
+}
+#main{
+
+}
+/* common */
+.row {
+    /* margin-left: -8px;
+    margin-right: -8px; */
+
+} 
+.roW::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+#contact .row-2{
+    float: right;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+.col {
+    float: left;
+    /* padding-left:8px;
+    padding-right:8px; */
+}
+.col-half{
+    width: 50%;
+}
+
+.col-45{
+    width:45%;
+}
+.col-full{
+    width:100%;
+}
+#header{
+height: 46px;
+background-color: #000;
+position: fixed;
+right:0;
+left:0;
+top: 0;
+z-index: 1;
+}
+#nav{
+    display: inline-block;
+}
+#nav > li {
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+    list-style-type: none;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav{
+display: none;
+position: absolute;
+background-color: #fff;
+box-shadow: 2px 2px 6px #3c3c3c;
+min-width: 160px;
+}
+#nav .subnav a{
+    color: #000;
+    line-height: 38px;
+    padding: 0 10px;
+}
+#nav > li >a{
+    color: #fff;
+}
+
+#nav li a{
+text-decoration: none;
+line-height: 46px;
+padding: 24px;
+padding-bottom: 14px;
+font-size: 20px;
+
+}
+
+#nav > li:hover{
+    color: #fff;
+    background-color:rgb(114, 114, 114);
+    height:46px;
+    cursor:pointer;
+    transform: translateY(-2px);
+    transition: all 0.4s;
+
+}
+#nav .subnav li:hover{
+    color: #fff;
+    background-color:rgb(114, 114, 114);
+    display:block;
+}
+#nav .icon-down{
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+#header .menu-icon-btn{
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+#header .search-btn, 
+#header .menu-icon-btn{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    float: right;
+    line-height: 46px;
+    padding: 0px 22px;
+    cursor: pointer;
+}
+
+#header .menu-icon-btn:hover{
+    background-color:#ccc;
+}
+
+
+.search-btn:hover{
+    background-color:red;
+}
+#slider {
+position: relative;
+background-color:#ccc;
+margin-top: 46px;
+padding-top: 50%;
+background: url('https://www.w3schools.com/w3images/chicago.jpg') no-repeat top center;
+/* background-repeat: no-repeat; */
+background-size:  contain;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    width: 100%;
+    /* left: 50%;
+    transform: translateX(-50%); co thể đặt width 100% cho dễ */
+    text-align: center;
+}
+#slider .text-heading{
+   padding-bottom: 15px;
+   font-weight: 500;
+}
+#slider .text-dcription{
+}
+ 
+/* The band */
+#content .content-section{
+width: 800px;
+max-width: 100%;
+margin-left: auto;
+margin-right: auto;
+padding:64px 16px;
+box-sizing: border-box;
+
+}
+#content .section-heading,
+#content .section-sub-heading{
+text-align: center;
+}
+#content .section-heading{
+    font-weight:400;
+    font-size:30px;
+    letter-spacing: 10px;
+}
+#content .section-sub-heading{
+margin-top:25px;
+font-style: italic;
+opacity: 80%;
+}
+#content .about-text{
+    text-align: justify;
+    margin-top:25px;
+    line-height: 1.3;
+    padding-bottom:15px;
+}
+
+/* Tour */
+#content .member-item{
+    
+    /* float: left; */
+}
+#content .member-list{
+    padding:32px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+#content .member-list img{
+    width: 155px;
+    height:auto;
+    border-radius: 5px;
+}
+#content .member-name{
+    font-size:16px;
+    text-align: center;
+    padding:15px 0;
+}
+#content .tour-section{
+    background-color: black;
+    color:#fff;
+}
+#content .ticket-list{
+    background-color:#fff;
+    color:#000;
+    margin-top: 40px;
+}
+.ticket-list li{
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ccc;
+    color:#757575;
+    list-style: none;
+}
+
+.ticket-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 3px;
+}
+
+.ticket-list .quantity{
+    background-color: #000;
+    float: right;
+    border-radius: 50%;
+    color: #fff;
+    /* padding-right: 10px; */
+    text-align: center;
+    width: 24px;
+    line-height: 24px;
+    margin-right: 14px;
+    margin-top: -3px;
+}
+
+#content .places-list{
+    
+    display: flex;
+    justify-content: space-around;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding-bottom: 32px;
+
+    
+}
+.places-item .places-img{
+    width: 100%;
+    height:auto;
+    padding-top: 32px;
+    display: block;
+}
+
+.places-item .places-img:hover{
+    opacity:80%;
+}
+.places-item{
+    padding:0px 8px;
+}
+.places-body{
+    background-color:#fff;
+    color: #000;
+    font-size:15px;
+    padding: 16px;
+}
+.place-heading{
+    font-weight:600;
+}
+.place-time{
+    padding: 15px 0;
+    color: #757575;
+}
+.place-description{
+    padding-bottom: 15px;
+}
+.place-buy-btn{
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+}
+.place-buy-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+/* Contact content */
+.contact-content{
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+.contact-form form{
+    padding-right: 18px;
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height:1.4;
+}
+
+.contact-info i{
+    width:30px;
+    display: inline-block;
+    padding-left: 6px;
+}
+
+.contact-info a {
+    color: rgb(78, 27, 219);
+    opacity: 0.7;
+}
+
+.contact-info a:hover {
+    color: rgb(255, 41, 4);
+}
+
+
+.contact-form form{
+    font-size: 15px;
+}
+.contact-form .form-control{
+    padding:8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.contact-form .row-1{
+    margin-bottom: 8px;
+}
+
+.form-submit-btn{
+    float: right;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 4px;
+    margin-right: -17px;
+    border: none;
+}
+.form-submit-btn:hover{
+background-color: #ccc;
+    color: #000;
+}
+.map-img img{
+   width: 100%;
+
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .icon-socail a {
+    text-decoration:none;
+    color: #615f5f;
+    font-size: 24px;
+}
+.icon-socail a:hover{
+    opacity: 0.6;
+    transition: all 1s;
+    transform: translateY(-2px);
+}
+#footer .copy-right, a{
+    color: #615f5f;
+    margin-top: 15px;
+}
+
